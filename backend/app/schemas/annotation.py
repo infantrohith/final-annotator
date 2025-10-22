@@ -19,7 +19,7 @@ class AnnotationCreate(AnnotationBase):
     height: Optional[float] = None
     coordinates: Optional[List[Dict[str, float]]] = None
     confidence: Optional[float] = None
-    metadata: Optional[Dict[str, Any]] = None
+    annotation_metadata: Optional[Dict[str, Any]] = None
 
 
 class AnnotationUpdate(BaseModel):
@@ -31,7 +31,7 @@ class AnnotationUpdate(BaseModel):
     height: Optional[float] = None
     coordinates: Optional[List[Dict[str, float]]] = None
     confidence: Optional[float] = None
-    metadata: Optional[Dict[str, Any]] = None
+    annotation_metadata: Optional[Dict[str, Any]] = None
 
 
 class Annotation(AnnotationBase):
@@ -44,7 +44,7 @@ class Annotation(AnnotationBase):
     height: Optional[float]
     coordinates: Optional[List[Dict[str, float]]]
     confidence: Optional[float]
-    metadata: Optional[Dict[str, Any]]
+    annotation_metadata: Optional[Dict[str, Any]]
     created_at: datetime
     updated_at: datetime
     
