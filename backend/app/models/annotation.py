@@ -26,7 +26,7 @@ class Annotation(Base):
     
     # Additional metadata
     confidence = Column(Float)
-    metadata = Column(JSON)
+    annotation_metadata = Column(JSON)
     
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)

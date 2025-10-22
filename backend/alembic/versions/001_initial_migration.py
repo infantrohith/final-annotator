@@ -85,7 +85,7 @@ def upgrade() -> None:
         sa.Column('height', sa.Float(), nullable=True),
         sa.Column('coordinates', postgresql.JSON(astext_type=sa.Text()), nullable=True),
         sa.Column('confidence', sa.Float(), nullable=True),
-        sa.Column('metadata', postgresql.JSON(astext_type=sa.Text()), nullable=True),
+        sa.Column('annotation_metadata', postgresql.JSON(astext_type=sa.Text()), nullable=True),
         sa.Column('created_at', sa.DateTime(), nullable=True),
         sa.Column('updated_at', sa.DateTime(), nullable=True),
         sa.ForeignKeyConstraint(['image_id'], ['images.id'], ),
